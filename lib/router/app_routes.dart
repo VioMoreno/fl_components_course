@@ -14,17 +14,29 @@ class AppRoutes {
     MenuOption(route: 'listview2', icon: Icons.format_list_numbered_rounded, name: 'Listview Tipo2', screen: const Listview2Screen()), 
     MenuOption(route: 'Alert', icon: Icons.add_alert_rounded, name: 'Alert', screen: const AlertScreen()),
     MenuOption(route: 'Card', icon: Icons.credit_card_outlined, name: 'Tarjetas - Cards', screen: const CardScreen())
-
-
   ]; 
 
-  static Map<String, Widget Function(BuildContext)> routes = {
-      'listView1': (BuildContext context) => const Listview1Screen (),
-      'listView2': (BuildContext context) => const Listview2Screen (),
-      'Alert'    : (BuildContext context) => const AlertScreen (),
-      'Card'     : (BuildContext context) => const CardScreen (),
-      'home'     : (BuildContext context) => const HomeScreen(),
-  }; 
+
+  static Map<String, Widget Function(BuildContext)> getAppRoutes() {
+
+    Map<String, Widget Function(BuildContext)> appRoutes = {}; 
+
+    for (final option in menuOptions) {
+      appRoutes.addAll({ 
+        option.route : (BuildContext context) => option.screen,
+      }); 
+    }
+
+    return appRoutes; 
+  }
+
+  // static Map<String, Widget Function(BuildContext)> routes = {
+  //     'listView1': (BuildContext context) => const Listview1Screen (),
+  //     'listView2': (BuildContext context) => const Listview2Screen (),
+  //     'Alert'    : (BuildContext context) => const AlertScreen (),
+  //     'Card'     : (BuildContext context) => const CardScreen (),
+  //     'home'     : (BuildContext context) => const HomeScreen(),
+  // }; 
 
   static Route<dynamic> onGenerateRoute (RouteSettings settings) {
         return MaterialPageRoute(
