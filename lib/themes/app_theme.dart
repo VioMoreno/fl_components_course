@@ -9,6 +9,9 @@ static final ThemeData lightTheme = ThemeData.light().copyWith(
         appBarTheme: const AppBarTheme(
           color: Color.fromARGB(255, 216, 47, 35),
           elevation: 10,
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(primary: primary)
         )
       ); 
 
