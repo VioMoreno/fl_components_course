@@ -1,4 +1,5 @@
 
+import 'package:fl_componentes/widgets/customcard2.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/widgets.dart';
@@ -16,7 +17,9 @@ class CardScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric( horizontal: 10, vertical: 10),
         children: const [
-          CustomCardType1()
+          CustomCardType1(),
+          SizedBox(height: 5),
+          CustomCardType2(), 
         ],
       )
     );
