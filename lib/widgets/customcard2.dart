@@ -3,12 +3,15 @@ import 'package:fl_componentes/themes/app_theme.dart';
 
 
 
-
-
-
-
 class CustomCardType2 extends StatelessWidget {
-  const CustomCardType2({Key? key}) : super(key: key);
+
+  final String imageUrl; 
+  final String? name; 
+
+  const CustomCardType2({
+    Key? key, required this.imageUrl, 
+     this.name
+    }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,19 +23,20 @@ class CustomCardType2 extends StatelessWidget {
       child: Column(
         children: [
         
-          const FadeInImage(
-            placeholder: AssetImage('assets/jar-loading.gif'),
-            image: NetworkImage('https://astelus.com/wp-content/viajes/Lago-Moraine-Parque-Nacional-Banff-Alberta-Canada.jpg'),
+           FadeInImage(
+            placeholder: const AssetImage('assets/jar-loading.gif'),
+            image: NetworkImage(imageUrl),
             width: double.infinity,
             height: 230,
             fit: BoxFit.cover,
-            fadeInDuration: Duration(milliseconds: 300,),
+            fadeInDuration:const Duration(milliseconds: 300,),
             ),
 
+          if (name != null)
             Container(
               padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10) ,
               alignment: AlignmentDirectional.centerEnd,
-              child: const Text('Lindo paisaje'))
+              child:  Text(name!))
 
 
         ],
