@@ -14,7 +14,8 @@ class AppRoutes {
     MenuOption(route: 'listview2', icon: Icons.format_list_numbered_rounded, name: 'Listview Tipo2', screen: const Listview2Screen()), 
     MenuOption(route: 'Alert', icon: Icons.add_alert_rounded, name: 'Alert', screen: const AlertScreen()),
     MenuOption(route: 'Card', icon: Icons.credit_card_outlined, name: 'Tarjetas - Cards', screen: const CardScreen()),
-    MenuOption(route: 'Avatar', icon: Icons.supervisor_account_rounded, name: 'Circle Avatar', screen: const AvatarScreen())
+    MenuOption(route: 'Avatar', icon: Icons.supervisor_account_rounded, name: 'Circle Avatar', screen: const AvatarScreen()),
+    MenuOption(route: 'Animated', icon: Icons.play_circle_filled_outlined, name: 'Animated Container', screen: const AnimatedScreen())
   ]; 
 
 
