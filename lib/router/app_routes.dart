@@ -9,23 +9,27 @@ class AppRoutes {
   static const initialRoute = 'home'; 
 
   static final menuOptions = <MenuOption> [
-   // MenuOption(route: 'home', name: 'Home Screen', screen: const HomeScreen(), icon: Icons.home_rounded),
+    //MenuOption(route: 'home', name: 'Home Screen', screen: const HomeScreen(), icon: Icons.home_rounded),
     MenuOption(route: 'listview1', icon: Icons.list_sharp, name: 'ListView Tipo1', screen: const Listview1Screen()), 
     MenuOption(route: 'listview2', icon: Icons.format_list_numbered_rounded, name: 'Listview Tipo2', screen: const Listview2Screen()), 
     MenuOption(route: 'Alert', icon: Icons.add_alert_rounded, name: 'Alert', screen: const AlertScreen()),
     MenuOption(route: 'Card', icon: Icons.credit_card_outlined, name: 'Tarjetas - Cards', screen: const CardScreen()),
     MenuOption(route: 'Avatar', icon: Icons.supervisor_account_rounded, name: 'Circle Avatar', screen: const AvatarScreen()),
-    MenuOption(route: 'Animated', icon: Icons.play_circle_filled_outlined, name: 'Animated Container', screen: const AnimatedScreen())
+    MenuOption(route: 'Animated', icon: Icons.play_circle_filled_outlined, name: 'Animated Container', screen: const AnimatedScreen()),
+    MenuOption(route: 'Inputs', icon: Icons.input_outlined, name: 'Text Inputs', screen: const InputsScreen()), 
   ]; 
 
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
 
     Map<String, Widget Function(BuildContext)> appRoutes = {}; 
+    appRoutes.addAll({ 
+        'home' : (BuildContext context) => const HomeScreen(),
+      }); 
 
     for (final option in menuOptions) {
       appRoutes.addAll({ 
-        'home': (BuildContext context) => const HomeScreen(),
+        option.route : (BuildContext context) => option.screen,
       }); 
     }
 
