@@ -1,6 +1,10 @@
 
 
 
+
+
+
+
 export 'package:fl_componentes/screens/alerta.dart';
 export 'package:fl_componentes/screens/animated.dart';
 export 'package:fl_componentes/screens/avatar.dart';
