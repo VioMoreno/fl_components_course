@@ -17,7 +17,18 @@ class InputsScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical:10),
           child: Column(
             children: const [
-              CustomImputField(labelText: 'Nombre', hintText: 'Nombre del usuario', helperText: 'Solo texto', counterText: '3 caracteres minimo',)],
+              CustomImputField(labelText: 'Nombre', hintText: 'Nombre del usuario', helperText: 'Solo texto', counterText: '3 caracteres minimo',),
+              SizedBox (height: 30), 
+
+              CustomImputField(labelText: 'Apellido', hintText: 'Apellido del usuario', helperText: 'Solo texto', counterText: '3 caracteres minimo',),
+              SizedBox (height: 30),
+              
+              CustomImputField(labelText: 'Email', hintText: 'Email del usuario', helperText: 'Solo texto', counterText: '3 caracteres minimo', keyboardType: TextInputType.emailAddress,),
+              SizedBox (height: 30),
+
+              CustomImputField(labelText: 'Contraseña', hintText: 'Contraseña del usuario', obscureText: true,), 
+              SizedBox (height: 30),
+            ],  
           ),
           ),
       )
