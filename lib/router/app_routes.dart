@@ -17,6 +17,7 @@ class AppRoutes {
     MenuOption(route: 'Avatar', icon: Icons.supervisor_account_rounded, name: 'Circle Avatar', screen: const AvatarScreen()),
     MenuOption(route: 'Animated', icon: Icons.play_circle_filled_outlined, name: 'Animated Container', screen: const AnimatedScreen()),
     MenuOption(route: 'Inputs', icon: Icons.input_outlined, name: 'Text Inputs', screen: const InputsScreen()), 
+    MenuOption(route: 'Slider', icon: Icons.check, name: 'Slider & Checks', screen: const SliderScreen()), 
   ]; 
 
 
