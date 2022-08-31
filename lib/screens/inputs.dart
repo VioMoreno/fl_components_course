@@ -32,29 +32,27 @@ class InputsScreen extends StatelessWidget {
             key: myFormKey,
             child: Column(
               children:  [
-                const CustomImputField(labelText: 'Nombre', hintText: 'Nombre del usuario', helperText: 'Solo texto', counterText: '3 caracteres minimo',),
+                CustomImputField(labelText: 'Nombre', hintText: 'Nombre del usuario', helperText: 'Solo texto', counterText: '3 caracteres minimo', formProperty: 'first Name', formvalues: formValues,),
                 const SizedBox (height: 30), 
           
-                const CustomImputField(labelText: 'Apellido', hintText: 'Apellido del usuario', helperText: 'Solo texto', counterText: '3 caracteres minimo',),
+                CustomImputField(labelText: 'Apellido', hintText: 'Apellido del usuario', helperText: 'Solo texto', counterText: '3 caracteres minimo',formProperty: 'last Name', formvalues: formValues),
                 const SizedBox (height: 30),
                 
-                const CustomImputField(labelText: 'Email', hintText: 'Email del usuario', helperText: 'Solo texto', counterText: '3 caracteres minimo', keyboardType: TextInputType.emailAddress,),
+                CustomImputField(labelText: 'Email', hintText: 'Email del usuario', helperText: 'Solo texto', counterText: '3 caracteres minimo', keyboardType: TextInputType.emailAddress,formProperty: 'email', formvalues: formValues),
                 const SizedBox (height: 30),
           
-                const CustomImputField(labelText: 'Contraseña', hintText: 'Contraseña del usuario', obscureText: true,), 
+                CustomImputField(labelText: 'Contraseña', hintText: 'Contraseña del usuario', obscureText: true,formProperty: 'password', formvalues: formValues), 
                 const SizedBox (height: 30),
           
                 ElevatedButton(
                   onPressed: (() {
-                    
                     FocusScope.of(context).requestFocus(FocusNode()); 
 
                     if (!myFormKey.currentState!.validate()){
                       return; 
                     }
-
                     print(formValues);
-                    
+
                   }),
                   child: const SizedBox(
                     width: double.infinity,
