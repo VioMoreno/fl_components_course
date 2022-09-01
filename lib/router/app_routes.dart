@@ -18,6 +18,7 @@ class AppRoutes {
     MenuOption(route: 'Animated', icon: Icons.play_circle_filled_outlined, name: 'Animated Container', screen: const AnimatedScreen()),
     MenuOption(route: 'Inputs', icon: Icons.input_outlined, name: 'Text Inputs', screen: const InputsScreen()), 
     MenuOption(route: 'Slider', icon: Icons.check, name: 'Slider & Checks', screen: const SliderScreen()), 
+    MenuOption(route: 'ListView Builder', icon: Icons.build_circle_outlined, name: 'Infinity Scrol & Pull to Refresh', screen: const ListViewBuilderScreen()), 
   ]; 
 
 
